@@ -1,6 +1,5 @@
 FROM node:12.18.4
-
-WORKDIR /code
+WORKDIR /code/server
 COPY . /code
 EXPOSE 3000
-CMD ["bash", "-c", "cd", "server", "&&", "npm install", "&&", "npm start"]
+CMD ["npm install", "&&", "npm start"]
