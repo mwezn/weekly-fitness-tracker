@@ -1,7 +1,10 @@
 FROM node:12.18.4
+RUN mkdir /code
 WORKDIR /code
 COPY . /code
-WORKDIR /code/server
+RUN cd /server
+RUN npm install
 EXPOSE 3000
-CMD ["bash", "-c", "npm", "install"]
-CMD ["bash", "-c", "npm", "start"]
+CMD ["npm", "start"]
+
+
